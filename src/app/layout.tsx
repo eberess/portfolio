@@ -58,12 +58,6 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: '/favicon.png',
-    shortcut: '/favicon.png',
-    apple: '/favicon.png',
-    other: {
-      rel: 'apple-touch-icon-precomposed',
-      url: '/favicon.png',
-    },
   },
 };
 
@@ -74,6 +68,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr" suppressHydrationWarning>
+      <head>
+        <link rel="icon" type="image/png" href="/favicon.png" />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}>
         <ThemeProvider
           attribute="class"
