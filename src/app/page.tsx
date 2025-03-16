@@ -7,10 +7,11 @@ import { Metadata } from 'next'
 const featuredProjects = [
   {
     id: 1,
-    title: "Application Web",
-    description: "React, TypeScript, TailwindCSS",
-    tags: ["React", "TypeScript", "TailwindCSS"],
-    href: "/projects",
+    title: "Wilmore Dynamics",
+    description: "Wilmore Dynamics est une entreprise de conseil en technologie et en stratégie. Je suis intervenu pour leur refonte de site web.",
+    tags: ["React", "TypeScript", "NextJS", "TailwindCSS"],
+    href: "https://wilmoredynamics.com",
+    image: "/projects/wilmore.webp",
     pattern: (
       <svg 
         className="absolute inset-0 w-full h-full text-foreground/[0.05] [mask-image:linear-gradient(to_bottom_right,white_40%,transparent_50%)]" 
@@ -21,16 +22,17 @@ const featuredProjects = [
         width="100%"
         height="100%"
       >
-        <path fill="currentColor" d="m297-581 149-243q6-10 15-14.5t19-4.5q10 0 19 4.5t15 14.5l149 243q6 10 6 21t-5 20q-5 9-14 14.5t-21 5.5H331q-12 0-21-5.5T296-540q-5-9-5-20t6-21ZM700-80q-75 0-127.5-52.5T520-260q0-75 52.5-127.5T700-440q75 0 127.5 52.5T880-260q0 75-52.5 127.5T700-80Zm-580-60v-240q0-17 11.5-28.5T160-420h240q17 0 28.5 11.5T440-380v240q0 17-11.5 28.5T400-100H160q-17 0-28.5-11.5T120-140Z"/>
+        <path fill="currentColor" d="m297-581 149-243q6-10 15-14.5t19-4.5q10 0 19 4.5t15 14.5l149 243q6-10 6 21t-5 20q-5 9-14 14.5t-21 5.5H331q-12 0-21-5.5T296-540q-5-9-5-20t6-21ZM700-80q-75 0-127.5-52.5T520-260q0-75 52.5-127.5T700-440q75 0 127.5 52.5T880-260q0 75-52.5 127.5T700-80Zm-580-60v-240q0-17 11.5-28.5T160-420h240q17 0 28.5 11.5T440-380v240q0 17-11.5 28.5T400-100H160q-17 0-28.5-11.5T120-140Z"/>
       </svg>
     )
   },
   {
     id: 2,
-    title: "Application Mobile",
-    description: "Une application mobile native avec React Native et Expo",
-    tags: ["React Native", "Expo", "TypeScript"],
-    href: "/projects",
+    title: "Alternative Music",
+    description: "Alternative Music est un site web d'aide et de conseil dans le droit musical. Je suis intervenu pour leur refonte de site web.",
+    tags: ["Wordpress", "PHP", "CSS", "Javascript"],
+    href: "https://alternativemusic.fr",
+    image: "/projects/am.webp",
     pattern: (
       <svg className="absolute inset-0 w-full h-full text-foreground/[0.05] rotate-180 [mask-image:linear-gradient(to_bottom_right,white_40%,transparent_50%)]" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
         <path fill="currentColor" d="m297-581 149-243q6-10 15-14.5t19-4.5q10 0 19 4.5t15 14.5l149 243q6 10 6 21t-5 20q-5 9-14 14.5t-21 5.5H331q-12 0-21-5.5T296-540q-5-9-5-20t6-21ZM700-80q-75 0-127.5-52.5T520-260q0-75 52.5-127.5T700-440q75 0 127.5 52.5T880-260q0 75-52.5 127.5T700-80Zm-580-60v-240q0-17 11.5-28.5T160-420h240q17 0 28.5 11.5T440-380v240q0 17-11.5 28.5T400-100H160q-17 0-28.5-11.5T120-140Z"/>
@@ -102,9 +104,16 @@ export default function Home() {
                   className="group relative aspect-square bg-gradient-to-br from-foreground/10 to-foreground/5 rounded-3xl overflow-hidden hover:from-foreground/15 hover:to-foreground/10 transition-all duration-300 border border-foreground/10"
                   aria-label={`Voir le projet ${project.title}`}
                 >
+                  {project.image && (
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity"
+                    />
+                  )}
                   {project.pattern}
                   <div 
-                    className="absolute inset-0 p-8 flex flex-col justify-between bg-gradient-to-t from-background/80 via-background/20 to-transparent"
+                    className="absolute inset-0 p-8 flex flex-col justify-between bg-gradient-to-t from-background/90 via-background/50 to-transparent"
                   >
                     <div className="flex flex-wrap gap-2">
                       {project.tags.map((tag, index) => (

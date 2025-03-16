@@ -19,21 +19,41 @@ type Project = {
     github?: string;
   };
   pattern: React.ReactNode;
+  image?: string;
 };
 
 const projects: Project[] = [
   {
+    id: 8,
+    title: "Never Told Legends",
+    description: "Never Told Legends est un site web et une application mobile pour l'entreprise Never Told Legends. J'ai contribué à la création et modernisation de l'entreprise.",
+    longDescription: "Never Told Legends est un site web et une application mobile pour l'entreprise Never Told Legends. J'ai contribué à la création et modernisation de l'entreprise. Avec comme outils principaux : React Native, Expo, React, TypeScript, TailwindCSS, Firebase, Stripe, React Native Reanimated. L'entreprise est une entreprise de jeux de sociétés et de jeux de rôle.",
+    tags: ["React Native", "Expo", "React", "TypeScript", "TailwindCSS", "Firebase", "Stripe", "React Native Reanimated"],
+    category: 'mobile',
+    status: 'in-progress',
+    image: "/projects/ntllogo.webp",
+    links: {
+      demo: "https://nevertoldlegends.com",
+    },
+    pattern: (
+      <svg className="absolute inset-0 w-full h-full text-foreground/[0.05] [mask-image:linear-gradient(to_bottom_right,white_40%,transparent_50%)]" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+        <path fill="currentColor" d="m297-581 149-243q6-10 15-14.5t19-4.5q10 0 19 4.5t15 14.5l149 243q6 10 6 21t-5 20q-5 9-14 14.5t-21 5.5H331q-12 0-21-5.5T296-540q-5-9-5-20t6-21ZM700-80q-75 0-127.5-52.5T520-260q0-75 52.5-127.5T700-440q75 0 127.5 52.5T880-260q0 75-52.5 127.5T700-80Zm-580-60v-240q0-17 11.5-28.5T160-420h240q17 0 28.5 11.5T440-380v240q0 17-11.5 28.5T400-100H160q-17 0-28.5-11.5T120-140Z" />
+      </svg>
+    )
+  },
+  {
     id: 1,
     title: "Wilmore Dynamics",
-    description: "Une application web moderne construite avec React, TypeScript et TailwindCSS",
-    longDescription: "Une application web complète construite avec les dernières technologies. Utilisation de React pour une interface utilisateur réactive, TypeScript pour un code plus robuste, et TailwindCSS pour un design moderne et responsive.",
-    tags: ["React", "TypeScript", "TailwindCSS"],
+    description: "Wilmore Dynamics est une entreprise de conseil en technologie et en stratégie. Je suis intervenu pour leur refonte de site web.",
+    longDescription: "Un site web complètement réalisé avec les dernières technologies. Utilisation de React pour une interface utilisateur réactive, TypeScript pour un code plus robuste, et TailwindCSS pour un design moderne et responsive.",
+    tags: ["React", "TypeScript", "NextJS", "TailwindCSS"],
     category: 'web',
-    status: 'labs',
+    status: 'completed',
     links: {
-      demo: "https://demo.example.com",
-      github: "https://github.com/example/project"
+      demo: "https://wilmoredynamics.com",
+      github: "https://git.wilmoredynamics.com/Wilmore_Dynamics/Wilmore_Dynamics"
     },
+    image: "/projects/wilmore.webp",
     pattern: (
       <svg className="absolute inset-0 w-full h-full text-foreground/[0.05] [mask-image:linear-gradient(to_bottom_right,white_40%,transparent_50%)]" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
         <path fill="currentColor" d="m297-581 149-243q6-10 15-14.5t19-4.5q10 0 19 4.5t15 14.5l149 243q6 10 6 21t-5 20q-5 9-14 14.5t-21 5.5H331q-12 0-21-5.5T296-540q-5-9-5-20t6-21ZM700-80q-75 0-127.5-52.5T520-260q0-75 52.5-127.5T700-440q75 0 127.5 52.5T880-260q0 75-52.5 127.5T700-80Zm-580-60v-240q0-17 11.5-28.5T160-420h240q17 0 28.5 11.5T440-380v240q0 17-11.5 28.5T400-100H160q-17 0-28.5-11.5T120-140Z" />
@@ -42,14 +62,31 @@ const projects: Project[] = [
   },
   {
     id: 2,
-    title: "Application Mobile",
-    description: "Une application mobile native développée avec React Native et Expo",
-    tags: ["React Native", "Expo", "TypeScript"],
-    category: 'mobile',
-    status: 'in-progress',
+    title: "Alternative Music",
+    description: "Alternative Music est un site web d'aide et de conseil dans le droit musical. Je suis intervenu pour leur refonte de site web.",
+    tags: ["Wordpress", "PHP", "CSS", "Javascript"],
+    category: 'web',
+    status: 'completed',
+    image: "/projects/am.webp",
     links: {
-      demo: "https://demo.example.com",
-      github: "https://github.com/example/project"
+      demo: "https://alternativemusic.fr"
+    },
+    pattern: (
+      <svg className="absolute inset-0 w-full h-full text-foreground/[0.05] [mask-image:linear-gradient(to_bottom_right,white_40%,transparent_50%)]" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+        <path fill="currentColor" d="m297-581 149-243q6-10 15-14.5t19-4.5q10 0 19 4.5t15 14.5l149 243q6 10 6 21t-5 20q-5 9-14 14.5t-21 5.5H331q-12 0-21-5.5T296-540q-5-9-5-20t6-21ZM700-80q-75 0-127.5-52.5T520-260q0-75 52.5-127.5T700-440q75 0 127.5 52.5T880-260q0 75-52.5 127.5T700-80Zm-580-60v-240q0-17 11.5-28.5T160-420h240q17 0 28.5 11.5T440-380v240q0 17-11.5 28.5T400-100H160q-17 0-28.5-11.5T120-140Z" />
+      </svg>
+    )
+  },
+  {
+    id: 3,
+    title: "Polyphone Music",
+    description: "Polyphone Music est un site web pour le groupe de musique Polyphone. Je suis intervenu pour leur refonte de site web.",
+    tags: ["Wordpress", "Docker", "PHP", "CSS", "Javascript"],
+    category: 'web',
+    status: 'completed',
+    image: "/projects/polyphone.webp",
+    links: {
+      demo: "https://polyphonemusic.fr",
     },
     pattern: (
       <svg className="absolute inset-0 w-full h-full text-foreground/[0.05] rotate-180 [mask-image:linear-gradient(to_bottom_right,white_40%,transparent_50%)]" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
@@ -57,21 +94,79 @@ const projects: Project[] = [
       </svg>
     )
   },
+
   {
-    id: 3,
-    title: "Application Web",
-    description: "Une application web moderne construite avec React, TypeScript et TailwindCSS",
-    tags: ["React", "TypeScript", "TailwindCSS"],
+    id: 4,
+    title: "Intech Paris",
+    description: "Intech Paris est un site web pour l'entrepise de maitrise d'oeuvre Intech Paris. Je suis intervenu pour leur refonte de site web.",
+    tags: ["Wordpress", "PHP", "CSS", "Javascript"],
     category: 'web',
-    status: 'labs',
+    status: 'completed',
+    image: "/projects/intech.webp",
+    links: {
+      demo: "https://intechparis.fr",
+    },
     pattern: (
       <svg className="absolute inset-0 w-full h-full text-foreground/[0.05] [mask-image:linear-gradient(to_bottom_right,white_40%,transparent_50%)]" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
         <path fill="currentColor" d="m297-581 149-243q6-10 15-14.5t19-4.5q10 0 19 4.5t15 14.5l149 243q6 10 6 21t-5 20q-5 9-14 14.5t-21 5.5H331q-12 0-21-5.5T296-540q-5-9-5-20t6-21ZM700-80q-75 0-127.5-52.5T520-260q0-75 52.5-127.5T700-440q75 0 127.5 52.5T880-260q0 75-52.5 127.5T700-80Zm-580-60v-240q0-17 11.5-28.5T160-420h240q17 0 28.5 11.5T440-380v240q0 17-11.5 28.5T400-100H160q-17 0-28.5-11.5T120-140Z" />
       </svg>
     )
-  }
-      // Vous pouvez ajouter d'autres projets ici
-      ];
+    },
+  {
+    id: 5,
+    title: "Hummink",
+    description: "Hummink est une startup innovante issue de l'IPGG et de l'ENS, spécialisée dans une technologie d'impression de haute précision révolutionnaire pour l'industrie des écrans, des semi-conducteurs et de l'électronique imprimée. J'ai contribué à la création de leur site web vitrine.",
+    tags: ["Wordpress", "PHP", "CSS", "Javascript"],
+    category: 'web',
+    status: 'completed',
+    image: "/projects/hummink.webp",
+    links: {
+      demo: "https://hummink.com",
+    },
+    pattern: (
+      <svg className="absolute inset-0 w-full h-full text-foreground/[0.05] [mask-image:linear-gradient(to_bottom_right,white_40%,transparent_50%)]" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+        <path fill="currentColor" d="m297-581 149-243q6-10 15-14.5t19-4.5q10 0 19 4.5t15 14.5l149 243q6 10 6 21t-5 20q-5 9-14 14.5t-21 5.5H331q-12 0-21-5.5T296-540q-5-9-5-20t6-21ZM700-80q-75 0-127.5-52.5T520-260q0-75 52.5-127.5T700-440q75 0 127.5 52.5T880-260q0 75-52.5 127.5T700-80Zm-580-60v-240q0-17 11.5-28.5T160-420h240q17 0 28.5 11.5T440-380v240q0 17-11.5 28.5T400-100H160q-17 0-28.5-11.5T120-140Z" />
+      </svg>
+    )
+  },
+  {
+    id: 6,
+    title: "François Vigorie",
+    description: "François Vigorie est un artiste sculpteur sur verre. J'ai contribué à la création de son site web vitrine.",
+    tags: ["Wordpress", "PHP", "CSS", "Javascript"],
+    category: 'web',
+    status: 'completed',
+    image: "/projects/fv.webp",
+    links: {
+      demo: "https://francoisvigorie.com",
+    },
+    pattern: (
+      <svg className="absolute inset-0 w-full h-full text-foreground/[0.05] [mask-image:linear-gradient(to_bottom_right,white_40%,transparent_50%)]" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+        <path fill="currentColor" d="m297-581 149-243q6-10 15-14.5t19-4.5q10 0 19 4.5t15 14.5l149 243q6 10 6 21t-5 20q-5 9-14 14.5t-21 5.5H331q-12 0-21-5.5T296-540q-5-9-5-20t6-21ZM700-80q-75 0-127.5-52.5T520-260q0-75 52.5-127.5T700-440q75 0 127.5 52.5T880-260q0 75-52.5 127.5T700-80Zm-580-60v-240q0-17 11.5-28.5T160-420h240q17 0 28.5 11.5T440-380v240q0 17-11.5 28.5T400-100H160q-17 0-28.5-11.5T120-140Z" />
+      </svg>
+    )
+  },
+  {
+    id: 7,
+    title: "Square",
+    description: "Square est un site web pour le studio d'effets visuels Square. J'ai contribué à la création et modernisation du workflow de travail de l'entreprise.",
+    longDescription: "Square est un site web pour le studio d'effets visuels Square. J'ai contribué à la création et modernisation du workflow de travail de l'entreprise. En répondant aux obligations légales, des studios de production. Avec comme outils principaux : Proxmox, Python, Docker, Nginx, PHP, MySQL, Kitsu.",
+    tags: ["Proxmox", "Python", "Docker", "Nginx", "PHP", "MySQL", "Kitsu", "React", "OpenVpn"],
+    category: 'web',
+    status: 'completed',
+    image: "/projects/square.webp",
+    links: {
+      demo: "https://square-vfx.com",
+    },
+    pattern: (
+      <svg className="absolute inset-0 w-full h-full text-foreground/[0.05] [mask-image:linear-gradient(to_bottom_right,white_40%,transparent_50%)]" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+        <path fill="currentColor" d="m297-581 149-243q6-10 15-14.5t19-4.5q10 0 19 4.5t15 14.5l149 243q6 10 6 21t-5 20q-5 9-14 14.5t-21 5.5H331q-12 0-21-5.5T296-540q-5-9-5-20t6-21ZM700-80q-75 0-127.5-52.5T520-260q0-75 52.5-127.5T700-440q75 0 127.5 52.5T880-260q0 75-52.5 127.5T700-80Zm-580-60v-240q0-17 11.5-28.5T160-420h240q17 0 28.5 11.5T440-380v240q0 17-11.5 28.5T400-100H160q-17 0-28.5-11.5T120-140Z" />
+      </svg>
+    )
+  },
+
+  
+];
 
 // Extraire les données uniques pour les filtres
 const allTags = Array.from(new Set(projects.flatMap(project => project.tags)));
@@ -82,8 +177,15 @@ const ProjectCard = memo(({ project, onClick }: { project: Project, onClick: () 
     onClick={onClick}
     className="text-left group relative aspect-[4/3] bg-gradient-to-br from-foreground/10 to-foreground/5 rounded-3xl overflow-hidden hover:from-foreground/15 hover:to-foreground/10 transition-all duration-300 border border-foreground/10"
   >
+    {project.image && (
+      <img
+        src={project.image}
+        alt={project.title}
+        className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity"
+      />
+    )}
     {project.pattern}
-    <div className="absolute inset-0 p-8 flex flex-col justify-between bg-gradient-to-t from-background/80 via-background/20 to-transparent">
+    <div className="absolute inset-0 p-8 flex flex-col justify-between bg-gradient-to-t from-background/90 via-background/50 to-transparent">
       <div className="flex flex-wrap gap-2">
         <span className={`px-3 py-1 text-xs font-medium rounded-full border ${
           project.status === 'completed' ? 'bg-green-500/10 text-green-500 border-green-500/20' :
