@@ -63,7 +63,7 @@ const projects: Project[] = [
   {
     id: 2,
     title: "Alternative Music",
-    description: "Alternative Music est un site web d'aide et de conseil dans le droit musical. Je suis intervenu pour leur refonte de site web.",
+    description: "Alternative Music propose un accompagnement personnalisé pour les musiciens émergents souhaitant se professionnaliser ? . Je suis intervenu pour leur refonte de site web.",
     tags: ["Wordpress", "PHP", "CSS", "Javascript"],
     category: 'web',
     status: 'completed',
