@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: alpine # Utilisation de votre runner nommé "fondation"
+    runs-on: alpine # Utilisation de votre runner
 
     steps:
       - name: Checkout code
