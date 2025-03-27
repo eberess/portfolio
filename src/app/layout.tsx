@@ -70,6 +70,7 @@ export default function RootLayout({
     <html lang="fr" suppressHydrationWarning>
       <head>
         <link rel="icon" type="image/png" href="/favicon.png" />
+        <script defer src="https://umami.wilmoredynamics.com/script.js" data-website-id="781490b2-39b8-436b-bc4c-46e6cc3545bc"></script>
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}>
         <ThemeProvider
