@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this software, please consider citing it using the metadata from this file."
+type: software
+title: "Mon Portfolio [Next.js/Node.js]"
+version: 1.0.0
+date-released: 2024-09-29
+authors:
+- given-names: [EL]
+  family-names: [Beressa]
+  affiliation: Développeur Full Stack Indépendant
+  email: "el.beress@gmail.com"
+  orcid: "https://orcid.org/0009-0006-6467-7282"
+repository-code: "https://github.com/eberess/portfolio.git"
+keywords:
+  - "Next.js"
+  - "Node.js"
+  - "Docker"
+  - "Portfolio"
