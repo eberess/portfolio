@@ -51,7 +51,7 @@ const projects: Project[] = [
     status: 'completed',
     links: {
       demo: "https://wilmoredynamics.com",
-      github: "https://git.wilmoredynamics.com/Wilmore_Dynamics/Wilmore_Dynamics"
+      github: "https://github.com/eberess/wilmore_dynamics"
     },
     image: "/projects/wilmore.webp",
     pattern: (
@@ -70,23 +70,6 @@ const projects: Project[] = [
     image: "/projects/am.webp",
     links: {
       demo: "https://alternativemusic.fr"
-    },
-    pattern: (
-      <svg className="absolute inset-0 w-full h-full text-foreground/[0.05] [mask-image:linear-gradient(to_bottom_right,white_40%,transparent_50%)]" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
-        <path fill="currentColor" d="m297-581 149-243q6-10 15-14.5t19-4.5q10 0 19 4.5t15 14.5l149 243q6 10 6 21t-5 20q-5 9-14 14.5t-21 5.5H331q-12 0-21-5.5T296-540q-5-9-5-20t6-21ZM700-80q-75 0-127.5-52.5T520-260q0-75 52.5-127.5T700-440q75 0 127.5 52.5T880-260q0 75-52.5 127.5T700-80Zm-580-60v-240q0-17 11.5-28.5T160-420h240q17 0 28.5 11.5T440-380v240q0 17-11.5 28.5T400-100H160q-17 0-28.5-11.5T120-140Z" />
-      </svg>
-    )
-  },
-  {
-    id: 9,
-    title: "Étoile Polaire",
-    description: "Étoile Polaire est une application de gestion de conteneurs Docker avec support multi-machines.",
-    tags: ["Python", "Docker", "Go", "Vue.js", "SQLite","JavaScript","TypeScript","NodeJs"],
-    category: 'web',
-    status: 'in-progress',
-    image: "",
-    links: {
-      demo: "https://git.wilmoredynamics.com/ab/etoile_polaire",
     },
     pattern: (
       <svg className="absolute inset-0 w-full h-full text-foreground/[0.05] [mask-image:linear-gradient(to_bottom_right,white_40%,transparent_50%)]" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
@@ -180,26 +163,10 @@ const projects: Project[] = [
       </svg>
     )
   },
-  {
-    id: 10,
-    title: "Orbit Docs",
-    description: "Une Notion moderne du doc, construit avec Next.js, Node.js et TypeScript.",
-    tags: ["Docker", "Node.js", "PostgreSQL", "TypeScript"],
-    category: 'web',
-    status: 'in-progress',
-    links: {
-      demo: "https://git.wilmoredynamics.com/ab/orbit_docs",
-    },
-    pattern: (
-      <svg className="absolute inset-0 w-full h-full text-foreground/[0.05] [mask-image:linear-gradient(to_bottom_right,white_40%,transparent_50%)]" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
-        <path fill="currentColor" d="m297-581 149-243q6-10 15-14.5t19-4.5q10 0 19 4.5t15 14.5l149 243q6 10 6 21t-5 20q-5 9-14 14.5t-21 5.5H331q-12 0-21-5.5T296-540q-5-9-5-20t6-21ZM700-80q-75 0-127.5-52.5T520-260q0-75 52.5-127.5T700-440q75 0 127.5 52.5T880-260q0 75-52.5 127.5T700-80Zm-580-60v-240q0-17 11.5-28.5T160-420h240q17 0 28.5 11.5T440-380v240q0 17-11.5 28.5T400-100H160q-17 0-28.5-11.5T120-140Z" />
-      </svg>
-    )
-  },
   
 ];
 
-// Extraire les données uniques pour les filtres
+// Données uniques pour les filtres
 const allTags = Array.from(new Set(projects.flatMap(project => project.tags)));
 const allCategories = Array.from(new Set(projects.map(project => project.category)));
 
