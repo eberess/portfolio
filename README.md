@@ -42,7 +42,7 @@ docker compose up -d --build
 ```
 L'option --build est nécessaire pour compiler l'application Next.js avant de la lancer dans le conteneur.
 
-Le portfolio sera accessible via : http://localhost:${NODE_APP_PORT}.
+Le portfolio sera accessible via : http://localhost:3000
 
 Pour vérifier les logs du serveur Next.js :
 ```sh
